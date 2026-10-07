@@ -13,6 +13,27 @@ import Combine
 import SwiftUI
 import UIKit
 
+// MARK: - Markdown render contracts (engine side)
+
+// These protocols decouple the message-list engine from concrete UI view
+// classes. OpenMinis implemented them on `SelectableMarkdownTextView` /
+// `TableAttachment` / `MinisLayoutManager` inside Views/Chat — UI code that
+// Dudu deliberately does not take. Dudu's own UI adopts these protocols on
+// its own views; until then the casts below simply never match and the
+// engine keeps its previous behaviour (keys unqualified, nothing
+// invalidated), exactly as documented on each call site.
+
+/// A view that can report the summed rendered height of its async
+/// math/image attachments (0 while nothing has rendered yet).
+public protocol DuduMarkdownRenderSignalReporting: AnyObject {
+    func asyncAttachmentRenderSignal() -> Int
+}
+
+/// A text attachment whose cached table layout can be dropped on width change.
+public protocol DuduTableAttachmentInvalidating: AnyObject {
+    func invalidateCachedLayoutForWidthChange()
+}
+
 // MARK: - MessageListItem
 
 /// Item identifier for the diffable data source.
@@ -642,7 +663,7 @@ class SelfSizingCell: UICollectionViewCell {
     }
 
     private static func firstMarkdownRenderSignal(in view: UIView) -> Int? {
-        if let tv = view as? SelectableMarkdownTextView {
+        if let tv = view as? DuduMarkdownRenderSignalReporting {
             return tv.asyncAttachmentRenderSignal()
         }
         for sub in view.subviews {
@@ -1145,14 +1166,19 @@ final class MessageListViewController: UIViewController {
     /// is dropped. Returns the number of TableAttachments reset.
     private static func invalidateTableAttachmentsInSubviews(of view: UIView) -> Int {
         var count = 0
-        if let tv = view as? SelectableMarkdownTextView, let storage = tv.textStorage as? NSTextStorage, storage.length > 0 {
+        // Engine used to cast to OpenMinis' `SelectableMarkdownTextView`
+        // (Views/Chat — UI Dudu does not take). Any UITextView works here;
+        // Dudu's own markdown views just need to be UITextViews for this
+        // invalidation walk to find them.
+        if let tv = view as? UITextView, tv.textStorage.length > 0 {
+            let storage = tv.textStorage
             storage.enumerateAttribute(.attachment, in: NSRange(location: 0, length: storage.length), options: []) { value, range, _ in
-                if let table = value as? TableAttachment {
+                if let table = value as? DuduTableAttachmentInvalidating {
                     table.invalidateCachedLayoutForWidthChange()
                     count += 1
-                    if let lm = tv.layoutManager as? MinisLayoutManager {
-                        lm.invalidateLayout(forCharacterRange: range, actualCharacterRange: nil)
-                    }
+                    // `invalidateLayout(forCharacterRange:actualCharacterRange:)`
+                    // is native NSLayoutManager API — no custom subclass needed.
+                    tv.layoutManager.invalidateLayout(forCharacterRange: range, actualCharacterRange: nil)
                 }
             }
             tv.setNeedsLayout()
