@@ -156,8 +156,9 @@ enum AIVoiceMessageComposer {
         //（分组按成员顺序 fallback），死透了抛错，不悄悄用别的声音顶。
         if let explicit = try resolveExplicitServices(voice: voice, group: group) {
             for service in explicit {
-                let (data, _) = try await synthesizeWithService(service, text)
-                return (data, VoiceOutputPlayer.wavDurationOf(data), service.name)
+                if let (data, _) = try await synthesizeWithService(service, text) {
+                    return (data, VoiceOutputPlayer.wavDurationOf(data), service.name)
+                }
             }
             throw VoiceComposeError.synthesisFailed(detail: "点名的 TTS 候选都失败了")
         }
@@ -317,8 +318,9 @@ enum AIVoiceMessageComposer {
     /// 完全一致（选中服务 → 模型分组）。
     private static func synthesizeWithServiceOrGroup(_ text: String) async throws -> (Data, String?) {
         for service in ttsServiceCandidates() {
-            let result = try await synthesizeWithService(service, text)
-            return result
+            if let result = try await synthesizeWithService(service, text) {
+                return result
+            }
         }
         for entry in VoiceProviderResolver.resolvedOutputCandidates() {
             guard let provider = VoiceProviderResolver.outputProvider(for: entry) else { continue }
