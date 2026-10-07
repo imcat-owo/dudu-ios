@@ -1207,7 +1207,7 @@
 		4A657BE2DAC5A14C7A3D479A /* VAD */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/OpenMinis/RealTimeCutVADLibrary"; requirement = {kind = exactVersion; version = 1.0.0;}; };
 /* End XCRemoteSwiftPackageReference section */
 /* Begin XCLocalSwiftPackageReference section */
-		55E4CC1A4CB69225A42595C8 /* XCLocalSwiftPackageReference "BridgeCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = ../BridgeCore; };
+		55E4CC1A4CB69225A42595C8 /* XCLocalSwiftPackageReference "BridgeCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = BridgeCore; };
 /* End XCLocalSwiftPackageReference section */
 /* Begin XCSwiftPackageProductDependency section */
 		C866C2FD8E0A35FDBA6D24C1 /* BridgeCore */ = {isa = XCSwiftPackageProductDependency; package = 55E4CC1A4CB69225A42595C8 /* BridgeCore */; productName = BridgeCore; };
