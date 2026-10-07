@@ -1170,6 +1170,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../deps/include",
 					"$(SRCROOT)/../../deps/include/ish",
+					"$(SRCROOT)/../../deps/ish",
 					"$(SRCROOT)/NativeOffloads",
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
@@ -1196,6 +1197,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../deps/include",
 					"$(SRCROOT)/../../deps/include/ish",
+					"$(SRCROOT)/../../deps/ish",
 					"$(SRCROOT)/NativeOffloads",
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
