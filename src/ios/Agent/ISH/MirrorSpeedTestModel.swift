@@ -4,6 +4,7 @@
 // Used by kernel boot to auto-detect fastest package mirrors.
 import Combine
 import Foundation
+import SwiftUI
 
 enum MirrorCategory: String, CaseIterable, Identifiable {
     case alpine, pip, npm
