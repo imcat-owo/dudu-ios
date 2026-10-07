@@ -367,6 +367,8 @@
 		BC3028DF9B3E43E58F40ECFD /* WebAppShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8279A816B44655A27B220A /* WebAppShortcut.swift */; };
 		A969ABFC3DF04182AA75FE22 /* StreamingHangLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D401D531814B18A6A6AB76 /* StreamingHangLogger.swift */; };
 		11095B3820BE499C9AC5D4D1 /* AppNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE7E790C7384C3C933C79B8 /* AppNotificationNames.swift */; };
+				F9B6F3770C9E492C99714B07 /* MarkdownEnginePrimitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9440E27BC46B44648F3D3BD5 /* MarkdownEnginePrimitives.swift */; };
+				D8049D30E60C4A19B5B7FBD5 /* MarkdownSegmentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D086B86C8BE4B6F896C386B /* MarkdownSegmentation.swift */; };
 		34944AB77BFB411CBD640EC6 /* MathAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F9A1048D334C46A3CD5246 /* MathAttachment.swift */; };
 		4A19605A3D9C420A97AAC73B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CDD90F4944AE97BFB80A /* ContentView.swift */; };
 		35560C5DF56344E1AE416028 /* MirrorSpeedTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C90ECEAA34D9197C5E837 /* MirrorSpeedTestModel.swift */; };
@@ -731,6 +733,8 @@
 		5F8279A816B44655A27B220A /* WebAppShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApp/WebAppShortcut.swift; sourceTree = "<group>"; };
 		35D401D531814B18A6A6AB76 /* StreamingHangLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug/StreamingHangLogger.swift; sourceTree = "<group>"; };
 		CBE7E790C7384C3C933C79B8 /* AppNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/AppNotificationNames.swift; sourceTree = "<group>"; };
+				9440E27BC46B44648F3D3BD5 /* MarkdownEnginePrimitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/Markdown/MarkdownEnginePrimitives.swift; sourceTree = "<group>"; };
+				4D086B86C8BE4B6F896C386B /* MarkdownSegmentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/Markdown/MarkdownSegmentation.swift; sourceTree = "<group>"; };
 		59F9A1048D334C46A3CD5246 /* MathAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/Markdown/MathAttachment.swift; sourceTree = "<group>"; };
 		BE68CDD90F4944AE97BFB80A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dudu/ContentView.swift; sourceTree = "<group>"; };
 		838C90ECEAA34D9197C5E837 /* MirrorSpeedTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/ISH/MirrorSpeedTestModel.swift; sourceTree = "<group>"; };
@@ -846,6 +850,8 @@
 				BC3028DF9B3E43E58F40ECFD /* WebAppShortcut.swift in Sources */,
 				A969ABFC3DF04182AA75FE22 /* StreamingHangLogger.swift in Sources */,
 				11095B3820BE499C9AC5D4D1 /* AppNotificationNames.swift in Sources */,
+				F9B6F3770C9E492C99714B07 /* MarkdownEnginePrimitives.swift in Sources */,
+				D8049D30E60C4A19B5B7FBD5 /* MarkdownSegmentation.swift in Sources */,
 				34944AB77BFB411CBD640EC6 /* MathAttachment.swift in Sources */,
 				831A09173B1073F512E1DF87 /* DuduApp.swift in Sources */,
 				B8E0D0C1421A2FC3F4589BDC /* DuduColors.swift in Sources */,
