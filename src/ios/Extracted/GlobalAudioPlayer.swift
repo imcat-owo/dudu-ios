@@ -13,6 +13,7 @@ class GlobalAudioPlayer: ObservableObject {
     @Published var duration: TimeInterval = 0
     @Published var isLoaded = false
     @Published var rate: Float = 1.0
+    @Published var fileName: String = ""
 
     private var player: AVAudioPlayer?
 
