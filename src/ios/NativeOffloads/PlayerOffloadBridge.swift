@@ -379,7 +379,6 @@ private class PlayerSession {
         ]
         return String(chars).trimmingCharacters(in: .whitespaces)
     }
-}
 
     // MARK: - Cleanup (called when user dismisses UI)
 
