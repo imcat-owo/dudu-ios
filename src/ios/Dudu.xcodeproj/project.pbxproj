@@ -351,6 +351,9 @@
 		E1D57025807F494F491F7CF5 /* ProviderCustomizationGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B504A4C314B91A9B40AAEA5E /* ProviderCustomizationGenerated.swift */; };
 		B34120AF1F6902988829B608 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C506B284456153250183ED4E /* Localizable.xcstrings */; };
 		459034A47985530300C24E3B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C5FAF32A5592D50AFCD2AAB8 /* PrivacyInfo.xcprivacy */; };
+		CE01C4FD415C6AE58161E025 /* SwiftAnthropic in Frameworks */ = {isa = PBXBuildFile; productRef = 85157E4AB4C04FEEDC86BDE8 /* SwiftAnthropic */; };
+		C44CA5A7E080E2400888B1F6 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = B0CF8C3815151797A6B80B73 /* SwiftMath */; };
+		BA96DB13FCF9620F47A478E7 /* RealTimeCutVADLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 752E334681F2F66CCCA02246 /* RealTimeCutVADLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -705,6 +708,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D987A94599CB426C950038 /* BridgeCore in Frameworks */,
+				CE01C4FD415C6AE58161E025 /* SwiftAnthropic in Frameworks */,
+				C44CA5A7E080E2400888B1F6 /* SwiftMath in Frameworks */,
+				BA96DB13FCF9620F47A478E7 /* RealTimeCutVADLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +768,9 @@
 			);
 			mainGroup = 31E33F0D17ABE884C2376A17;
 			packageReferences = (
+				4A657BE2DAC5A14C7A3D479A /* VAD */,
+				CB3555B2A935947A800E17FE /* swift-math */,
+				5BD2FBC3C7A0C6BAE109F659 /* SwiftAnthropic */,
 				AF74D7B24B4E3EFCD7E3258C /* swift-cmark */,
 				55E4CC1A4CB69225A42595C8 /* BridgeCore */,
 			);
@@ -1193,6 +1202,9 @@
 
 /* Begin XCRemoteSwiftPackageReference section */
 		AF74D7B24B4E3EFCD7E3258C /* XCRemoteSwiftPackageReference "swift-cmark" */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/swiftlang/swift-cmark"; requirement = {kind = upToNextMajorVersion; minimumVersion = 0.4.0;}; };
+		5BD2FBC3C7A0C6BAE109F659 /* SwiftAnthropic */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/OpenMinis/SwiftAnthropic"; requirement = {kind = exactVersion; version = 2.2.0;}; };
+		CB3555B2A935947A800E17FE /* swift-math */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/apple/swift-math"; requirement = {kind = exactVersion; version = 1.7.3;}; };
+		4A657BE2DAC5A14C7A3D479A /* VAD */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/OpenMinis/RealTimeCutVADLibrary"; requirement = {kind = exactVersion; version = 1.0.0;}; };
 /* End XCRemoteSwiftPackageReference section */
 /* Begin XCLocalSwiftPackageReference section */
 		55E4CC1A4CB69225A42595C8 /* XCLocalSwiftPackageReference "BridgeCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = ../BridgeCore; };
@@ -1200,6 +1212,9 @@
 /* Begin XCSwiftPackageProductDependency section */
 		C866C2FD8E0A35FDBA6D24C1 /* BridgeCore */ = {isa = XCSwiftPackageProductDependency; package = 55E4CC1A4CB69225A42595C8 /* BridgeCore */; productName = BridgeCore; };
 		135B192CFB4BFE4C2B2DF2BF /* cmark-gfm */ = {isa = XCSwiftPackageProductDependency; package = AF74D7B24B4E3EFCD7E3258C /* swift-cmark */; productName = cmark-gfm; };
+		85157E4AB4C04FEEDC86BDE8 /* SwiftAnthropic */ = {isa = XCSwiftPackageProductDependency; package = 5BD2FBC3C7A0C6BAE109F659 /* SwiftAnthropic */; productName = SwiftAnthropic; };
+		B0CF8C3815151797A6B80B73 /* SwiftMath */ = {isa = XCSwiftPackageProductDependency; package = CB3555B2A935947A800E17FE /* swift-math */; productName = SwiftMath; };
+		752E334681F2F66CCCA02246 /* RealTimeCutVADLibrary */ = {isa = XCSwiftPackageProductDependency; package = 4A657BE2DAC5A14C7A3D479A /* VAD */; productName = RealTimeCutVADLibrary; };
 /* End XCSwiftPackageProductDependency section */
 /* Begin XCConfigurationList section */
 		2EF0642AEE0821CE72F0FE13 /* Build configuration list for PBXProject "Test" */ = {
