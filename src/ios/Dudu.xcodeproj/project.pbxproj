@@ -358,6 +358,8 @@
 		A6A1FA60CCFAD2B4B1BE1FB2 /* ISHShellExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = EE357FA9A6B5CA619ADDFC7F /* ISHShellExecutor.m */; };
 		68AD4D3BA21D14A817C3CB8C /* CurrentRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = CD497D3DE54CF98532C684EC /* CurrentRoot.m */; };
 		5D37B15FED43D9119523375D /* RootfsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357109E0F4E7934020503EA /* RootfsManager.swift */; };
+		36B522D5F9E74FA2AF0ADA80 /* AutoTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DDC7A933DAD8F0A99EFF0C /* AutoTouch.m */; };
+		06B1D586E5D749B8CE172360 /* AttributeQueryRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD167259DF61E225DDCB1D0 /* AttributeQueryRecorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -707,6 +709,8 @@
 		EE357FA9A6B5CA619ADDFC7F /* ISHShellExecutor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "iSH/ISHShellExecutor.m"; sourceTree = "<group>"; };
 		CD497D3DE54CF98532C684EC /* CurrentRoot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "iSH/CurrentRoot.m"; sourceTree = "<group>"; };
 		E357109E0F4E7934020503EA /* RootfsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iSH/RootfsManager.swift"; sourceTree = "<group>"; };
+		20DDC7A933DAD8F0A99EFF0C /* AutoTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Debug/AutoTouch.m"; sourceTree = "<group>"; };
+		6BD167259DF61E225DDCB1D0 /* AttributeQueryRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Debug/AttributeQueryRecorder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1151,6 +1155,8 @@
 				A6A1FA60CCFAD2B4B1BE1FB2 /* ISHShellExecutor.m in Sources */,
 				68AD4D3BA21D14A817C3CB8C /* CurrentRoot.m in Sources */,
 				5D37B15FED43D9119523375D /* RootfsManager.swift in Sources */,
+				36B522D5F9E74FA2AF0ADA80 /* AutoTouch.m in Sources */,
+				06B1D586E5D749B8CE172360 /* AttributeQueryRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1185,6 +1191,7 @@
 					"$(SRCROOT)/../../deps/ish",
 					"$(SRCROOT)/NativeOffloads",
 					"$(SRCROOT)/iSH",
+					"$(SRCROOT)/Debug",
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/../../deps/frameworks/Rclone.xcframework/ios-arm64/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
@@ -1214,6 +1221,7 @@
 					"$(SRCROOT)/../../deps/ish",
 					"$(SRCROOT)/NativeOffloads",
 					"$(SRCROOT)/iSH",
+					"$(SRCROOT)/Debug",
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/../../deps/frameworks/Rclone.xcframework/ios-arm64/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
