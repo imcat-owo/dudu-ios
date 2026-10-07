@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 /* Begin PBXBuildFile section */
 		2CEAE95AFC7E0DB7CA329E58 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DD52076B5BE7D8EF971A2 /* ContentView.swift */; };
