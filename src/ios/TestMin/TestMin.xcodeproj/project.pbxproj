@@ -129,8 +129,24 @@
 		8D56576C683F0FFBE21E3CA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/src/ios/Dudu/Dudu.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/src/ios/Dudu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dudu.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/src/ios/Dudu/Dudu-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				HEADER_SEARCH_PATHS = ("$(SRCROOT)/deps/include", "$(SRCROOT)/deps/include/ish", "$(SRCROOT)/src/ios/NativeOffloads", "$(SRCROOT)/src/ios/Vendor/cppjieba/include", "$(inherited)");
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/deps/libs";
+				OTHER_LDFLAGS = ("-lish_emu", "-lish", "-lfakefs");
+				FRAMEWORK_SEARCH_PATHS = ("$(SRCROOT)/deps/frameworks", "$(inherited)");
+				GCC_PREPROCESSOR_DEFINITIONS = ("ISH_INTERNAL=1", "GUEST_ARM64=1", "$(inherited)");
+				CODE_SIGN_IDENTITY = "";
 			};
 			name = Debug;
 		};
