@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "31E33F0D17ABE884C2376A17"
+               BlueprintIdentifier = "F59EA277784037966BBD4079"
                BuildableName = "Dudu.app"
                BlueprintName = "Dudu"
                ReferencedContainer = "container:Dudu.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31E33F0D17ABE884C2376A17"
+            BlueprintIdentifier = "F59EA277784037966BBD4079"
             BuildableName = "Dudu.app"
             BlueprintName = "Dudu"
             ReferencedContainer = "container:Dudu.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31E33F0D17ABE884C2376A17"
+            BlueprintIdentifier = "F59EA277784037966BBD4079"
             BuildableName = "Dudu.app"
             BlueprintName = "Dudu"
             ReferencedContainer = "container:Dudu.xcodeproj">
@@ -72,7 +72,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "31E33F0D17ABE884C2376A17"
+            BlueprintIdentifier = "F59EA277784037966BBD4079"
             BuildableName = "Dudu.app"
             BlueprintName = "Dudu"
             ReferencedContainer = "container:Dudu.xcodeproj">
