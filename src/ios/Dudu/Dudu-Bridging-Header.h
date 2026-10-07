@@ -14,6 +14,7 @@
 #import <CommonCrypto/CommonKeyDerivation.h>
 
 // iSH umbrella header (includes all necessary headers)
+#define ISH_INTERNAL 1
 #include "ish/ish.h"
 
 // Additional headers not in umbrella
