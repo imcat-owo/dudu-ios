@@ -16,6 +16,11 @@
 
 // Swift bridge — generated header
 #if __has_include("Dudu-Swift.h")
+#import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
+#import <SafariServices/SafariServices.h>
+#import <AuthenticationServices/AuthenticationServices.h>
+#import <MetricKit/MetricKit.h>
 #import "Dudu-Swift.h"
 #else
 @interface SessionsOffloadBridge : NSObject

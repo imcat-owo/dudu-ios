@@ -16,6 +16,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "NativeOffloadUtils.h"
+#import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
+#import <SafariServices/SafariServices.h>
+#import <AuthenticationServices/AuthenticationServices.h>
+#import <MetricKit/MetricKit.h>
 #import "Dudu-Swift.h"
 #include "kernel/native_offload.h"
 #include <unistd.h>
