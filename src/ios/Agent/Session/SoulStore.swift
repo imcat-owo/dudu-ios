@@ -469,36 +469,6 @@ enum SoulIconSource {
     }
 }
 
-/// [T-soul-custom-icon] The Soul identity icon, rendered the same way
-/// everywhere it appears.
-///
-/// Shared so every surface (Soul Settings preview at 32pt, the settings
-/// picker sheet, chat turn header at 18pt) cannot drift apart: they differ
-/// only in `size`. The image branch is drawn 1:1 — `encode` already
-/// guaranteed a square, so this cannot distort.
-///
-/// [T-soul-icon-opaque-rounded] The image clip is a CONTINUOUS ROUNDED
-/// RECTANGLE, and that is the single place the shape is decided. Since
-/// opaque images are now accepted, the renderer is what stops a JPEG from
-/// reading as a hard-edged tile — so the corner treatment has to live in the
-/// shared component, not at each call site, or one surface would inevitably
-/// miss it.
-///
-/// Rounded rather than a circle: at 18pt a circular mask eats the corners of
-/// a small avatar (logos and faces lose noticeably more), and the request was
-/// explicitly for a soft edge, not a crop to round. The radius scales with
-/// `size` so the 18pt header and the 32pt card look like the same shape
-/// rather than one looking markedly boxier than the other.
- else {
-            // [avatar] Anything that is not an image — empty, or a legacy
-            // emoji value stored by an older build — renders as the
-            // default SF Symbol sparkle, never as an emoji glyph.
-            Image(systemName: "sparkles")
-                .font(.system(size: size, weight: .semibold))
-        }
-    }
-}
-
 /// Persistent personality/identity file living alongside GLOBAL.md and the
 /// daily memory logs. Two-part format: YAML frontmatter (delimited by `---`)
 /// followed by a Markdown body. The body is injected as Layer 1 of the
