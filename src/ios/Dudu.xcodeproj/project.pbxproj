@@ -185,6 +185,7 @@
 		C08DE4CF9DBEF894A0402737 /* OAuthRefreshCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FA3EF45E89AEF0734CC315 /* OAuthRefreshCoordinator.swift */; };
 		5B0925807B091E0EFD7E61BC /* OAuthRefreshSingleFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD64D1624AF4468A7F19BBC /* OAuthRefreshSingleFlight.swift */; };
 		3D406DC991C51D509E8E85F4 /* ProviderConfigDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995DC47939DB8DE41FE4CFF7 /* ProviderConfigDB.swift */; };
+				BB570C97DA1C4FB39F2284C8 /* ProviderRowCredentialCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1072857BEB490F8F80EB91 /* ProviderRowCredentialCache.swift */; };
 		AFE8ADE246C2173C3C718197 /* ProviderConfigStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9010208248FE9487F151033 /* ProviderConfigStore.swift */; };
 		D917CBBE2DFD42B3606D9DDE /* ProviderInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E806D8EFDFCC03E733F9C4C /* ProviderInstance.swift */; };
 		0FA806D7C2332A0DDD894080 /* ProviderMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A881694356B46D94D943D9 /* ProviderMigration.swift */; };
@@ -554,6 +555,7 @@
 		87FA3EF45E89AEF0734CC315 /* OAuthRefreshCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/OAuthRefreshCoordinator.swift; sourceTree = "<group>"; };
 		2FD64D1624AF4468A7F19BBC /* OAuthRefreshSingleFlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/OAuthRefreshSingleFlight.swift; sourceTree = "<group>"; };
 		995DC47939DB8DE41FE4CFF7 /* ProviderConfigDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderConfigDB.swift; sourceTree = "<group>"; };
+				2A1072857BEB490F8F80EB91 /* ProviderRowCredentialCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderRowCredentialCache.swift; sourceTree = "<group>"; };
 		A9010208248FE9487F151033 /* ProviderConfigStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderConfigStore.swift; sourceTree = "<group>"; };
 		5E806D8EFDFCC03E733F9C4C /* ProviderInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderInstance.swift; sourceTree = "<group>"; };
 		93A881694356B46D94D943D9 /* ProviderMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers/ProviderMigration.swift; sourceTree = "<group>"; };
@@ -1026,6 +1028,7 @@
 				C08DE4CF9DBEF894A0402737 /* OAuthRefreshCoordinator.swift in Sources */,
 				5B0925807B091E0EFD7E61BC /* OAuthRefreshSingleFlight.swift in Sources */,
 				3D406DC991C51D509E8E85F4 /* ProviderConfigDB.swift in Sources */,
+				BB570C97DA1C4FB39F2284C8 /* ProviderRowCredentialCache.swift in Sources */,
 				AFE8ADE246C2173C3C718197 /* ProviderConfigStore.swift in Sources */,
 				D917CBBE2DFD42B3606D9DDE /* ProviderInstance.swift in Sources */,
 				0FA806D7C2332A0DDD894080 /* ProviderMigration.swift in Sources */,
