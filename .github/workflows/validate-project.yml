@@ -14,4 +14,4 @@ jobs:
           submodules: recursive
       - name: List project
         run: |
-          xcodebuild -list -project src/ios/MergeTest/MergeTest.xcodeproj 2>&1 | head -40
+          xcodebuild -list -project src/ios/Dudu.xcodeproj 2>&1 | head -40
