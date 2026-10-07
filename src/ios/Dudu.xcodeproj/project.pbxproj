@@ -353,6 +353,7 @@
 		CE01C4FD415C6AE58161E025 /* SwiftAnthropic in Frameworks */ = {isa = PBXBuildFile; productRef = 85157E4AB4C04FEEDC86BDE8 /* SwiftAnthropic */; };
 		C44CA5A7E080E2400888B1F6 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = B0CF8C3815151797A6B80B73 /* SwiftMath */; };
 		BA96DB13FCF9620F47A478E7 /* RealTimeCutVADLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 752E334681F2F66CCCA02246 /* RealTimeCutVADLibrary */; };
+		ABC5FA1CB581A96E22A4B7A1 /* cmark-gfm-extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 9802EEDEC11F75F27A51EE56 /* cmark-gfm-extensions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -709,6 +710,7 @@
 				CE01C4FD415C6AE58161E025 /* SwiftAnthropic in Frameworks */,
 				C44CA5A7E080E2400888B1F6 /* SwiftMath in Frameworks */,
 				BA96DB13FCF9620F47A478E7 /* RealTimeCutVADLibrary in Frameworks */,
+				ABC5FA1CB581A96E22A4B7A1 /* cmark-gfm-extensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,6 +1226,7 @@
 		85157E4AB4C04FEEDC86BDE8 /* SwiftAnthropic */ = {isa = XCSwiftPackageProductDependency; package = 5BD2FBC3C7A0C6BAE109F659 /* SwiftAnthropic */; productName = SwiftAnthropic; };
 		B0CF8C3815151797A6B80B73 /* SwiftMath */ = {isa = XCSwiftPackageProductDependency; package = CB3555B2A935947A800E17FE /* swift-math */; productName = SwiftMath; };
 		752E334681F2F66CCCA02246 /* RealTimeCutVADLibrary */ = {isa = XCSwiftPackageProductDependency; package = 4A657BE2DAC5A14C7A3D479A /* VAD */; productName = RealTimeCutVADLibrary; };
+		9802EEDEC11F75F27A51EE56 /* cmark-gfm-extensions */ = {isa = XCSwiftPackageProductDependency; package = AF74D7B24B4E3EFCD7E3258C /* swift-cmark */; productName = "cmark-gfm-extensions"; };
 /* End XCSwiftPackageProductDependency section */
 /* Begin XCConfigurationList section */
 		2EF0642AEE0821CE72F0FE13 /* Build configuration list for PBXProject "Test" */ = {
