@@ -18,6 +18,9 @@
 #import <SafariServices/SafariServices.h>
 #import <AuthenticationServices/AuthenticationServices.h>
 #import <MetricKit/MetricKit.h>
+#import <UserNotifications/UserNotifications.h>
+#import <AVFoundation/AVFoundation.h>
+@import RealTimeCutVADLibrary;
 #import "Dudu-Swift.h"
 
 static NSString *const TOOL_NAME = @"apple-player";
