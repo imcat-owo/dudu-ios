@@ -339,7 +339,6 @@
 		ABFA9611DC701A6F112D6244 /* BrowserResourceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1975F333A696362872820A /* BrowserResourceMonitor.swift */; };
 		5B1ADB24483E2845EDB31B68 /* CrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B9786ED3D702C33D43D73 /* CrashReporter.swift */; };
 		8CC2378F4AA0006A6734C511 /* CrashSignalHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ECF43E2C1703029BAC0552 /* CrashSignalHandler.m */; };
-		624A91250DE596846C7D02FC /* AppearanceStudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050C6B2F6591961E8E5A213B /* AppearanceStudio.swift */; };
 		3321C436E5AEF120E19F48FE /* AppearanceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815FE2B48F58F2ED3BC967F /* AppearanceTypes.swift */; };
 		0025399830D5C7D0A67CC88E /* GlobalAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5AECFB5C406164EC4028D0 /* GlobalAudioPlayer.swift */; };
 		61760C83C0D6767FE26D7120 /* MountedFolderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AE05C01EC5F6526F0AAD2E /* MountedFolderCoordinator.swift */; };
@@ -365,6 +364,10 @@
 		539470CA228B6A9C1A2FF0EC /* ObjCExceptionCatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD370477C5FE39B840A88ED /* ObjCExceptionCatcher.m */; };
 		37B6A8A4DF7AFCFA846EFDC7 /* SafeKVCSetTrue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1527C6B0D3733E5FAF926B /* SafeKVCSetTrue.m */; };
 		8670FAC876672AD6AADE54F6 /* HangDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DC88A50F52F655046DDFA6 /* HangDetector.m */; };
+		BC3028DF9B3E43E58F40ECFD /* WebAppShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8279A816B44655A27B220A /* WebAppShortcut.swift */; };
+		A969ABFC3DF04182AA75FE22 /* StreamingHangLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D401D531814B18A6A6AB76 /* StreamingHangLogger.swift */; };
+		11095B3820BE499C9AC5D4D1 /* AppNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE7E790C7384C3C933C79B8 /* AppNotificationNames.swift */; };
+		34944AB77BFB411CBD640EC6 /* MathAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F9A1048D334C46A3CD5246 /* MathAttachment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -699,7 +702,6 @@
 		AF1975F333A696362872820A /* BrowserResourceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics/BrowserResourceMonitor.swift; sourceTree = "<group>"; };
 		F46B9786ED3D702C33D43D73 /* CrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostics/CrashReporter.swift; sourceTree = "<group>"; };
 		18ECF43E2C1703029BAC0552 /* CrashSignalHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Diagnostics/CrashSignalHandler.m; sourceTree = "<group>"; };
-		050C6B2F6591961E8E5A213B /* AppearanceStudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracted/AppearanceStudio.swift; sourceTree = "<group>"; };
 		5815FE2B48F58F2ED3BC967F /* AppearanceTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracted/AppearanceTypes.swift; sourceTree = "<group>"; };
 		9E5AECFB5C406164EC4028D0 /* GlobalAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracted/GlobalAudioPlayer.swift; sourceTree = "<group>"; };
 		19AE05C01EC5F6526F0AAD2E /* MountedFolderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extracted/MountedFolderCoordinator.swift; sourceTree = "<group>"; };
@@ -721,6 +723,10 @@
 		5CD370477C5FE39B840A88ED /* ObjCExceptionCatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Shared/ObjCExceptionCatcher.m"; sourceTree = "<group>"; };
 		3F1527C6B0D3733E5FAF926B /* SafeKVCSetTrue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Shared/SafeKVCSetTrue.m"; sourceTree = "<group>"; };
 		E4DC88A50F52F655046DDFA6 /* HangDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Debug/HangDetector.m"; sourceTree = "<group>"; };
+		5F8279A816B44655A27B220A /* WebAppShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApp/WebAppShortcut.swift; sourceTree = "<group>"; };
+		35D401D531814B18A6A6AB76 /* StreamingHangLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug/StreamingHangLogger.swift; sourceTree = "<group>"; };
+		CBE7E790C7384C3C933C79B8 /* AppNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/AppNotificationNames.swift; sourceTree = "<group>"; };
+		59F9A1048D334C46A3CD5246 /* MathAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/Markdown/MathAttachment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -822,6 +828,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3028DF9B3E43E58F40ECFD /* WebAppShortcut.swift in Sources */,
+				A969ABFC3DF04182AA75FE22 /* StreamingHangLogger.swift in Sources */,
+				11095B3820BE499C9AC5D4D1 /* AppNotificationNames.swift in Sources */,
+				34944AB77BFB411CBD640EC6 /* MathAttachment.swift in Sources */,
 				831A09173B1073F512E1DF87 /* DuduApp.swift in Sources */,
 				B8E0D0C1421A2FC3F4589BDC /* DuduColors.swift in Sources */,
 				4BAF794FA0DF2FD7D124165B /* DuduToast.swift in Sources */,
@@ -1152,7 +1162,6 @@
 				ABFA9611DC701A6F112D6244 /* BrowserResourceMonitor.swift in Sources */,
 				5B1ADB24483E2845EDB31B68 /* CrashReporter.swift in Sources */,
 				8CC2378F4AA0006A6734C511 /* CrashSignalHandler.m in Sources */,
-				624A91250DE596846C7D02FC /* AppearanceStudio.swift in Sources */,
 				3321C436E5AEF120E19F48FE /* AppearanceTypes.swift in Sources */,
 				0025399830D5C7D0A67CC88E /* GlobalAudioPlayer.swift in Sources */,
 				61760C83C0D6767FE26D7120 /* MountedFolderCoordinator.swift in Sources */,

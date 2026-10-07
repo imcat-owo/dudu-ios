@@ -568,7 +568,7 @@ struct AppearancePalette {
     let dark: [AppearanceColorRole: String]
 }
 
-private enum AppearancePaletteBook {
+enum AppearancePaletteBook {
     static let light: [AppearanceColorRole: String] = [
         .canvas: "FFF8F4", .surface: "FFFDFC", .raised: "FFFFFF",
         .mutedSurface: "F8ECE8", .primaryText: "3E312B", .secondaryText: "8D786F",
