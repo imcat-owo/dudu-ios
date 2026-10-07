@@ -368,6 +368,9 @@
 		A969ABFC3DF04182AA75FE22 /* StreamingHangLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D401D531814B18A6A6AB76 /* StreamingHangLogger.swift */; };
 		11095B3820BE499C9AC5D4D1 /* AppNotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE7E790C7384C3C933C79B8 /* AppNotificationNames.swift */; };
 		34944AB77BFB411CBD640EC6 /* MathAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F9A1048D334C46A3CD5246 /* MathAttachment.swift */; };
+		4A19605A3D9C420A97AAC73B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE68CDD90F4944AE97BFB80A /* ContentView.swift */; };
+		35560C5DF56344E1AE416028 /* MirrorSpeedTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C90ECEAA34D9197C5E837 /* MirrorSpeedTestModel.swift */; };
+		CD45720323A94AD682BEE362 /* MarkdownPrepRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4BF6298C714D11B8F1EFAD /* MarkdownPrepRegex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -727,6 +730,9 @@
 		35D401D531814B18A6A6AB76 /* StreamingHangLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug/StreamingHangLogger.swift; sourceTree = "<group>"; };
 		CBE7E790C7384C3C933C79B8 /* AppNotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared/AppNotificationNames.swift; sourceTree = "<group>"; };
 		59F9A1048D334C46A3CD5246 /* MathAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/Markdown/MathAttachment.swift; sourceTree = "<group>"; };
+		BE68CDD90F4944AE97BFB80A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dudu/ContentView.swift; sourceTree = "<group>"; };
+		838C90ECEAA34D9197C5E837 /* MirrorSpeedTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/ISH/MirrorSpeedTestModel.swift; sourceTree = "<group>"; };
+		8F4BF6298C714D11B8F1EFAD /* MarkdownPrepRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent/Markdown/MarkdownPrepRegex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -828,6 +834,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A19605A3D9C420A97AAC73B /* ContentView.swift in Sources */,
+				35560C5DF56344E1AE416028 /* MirrorSpeedTestModel.swift in Sources */,
+				CD45720323A94AD682BEE362 /* MarkdownPrepRegex.swift in Sources */,
 				BC3028DF9B3E43E58F40ECFD /* WebAppShortcut.swift in Sources */,
 				A969ABFC3DF04182AA75FE22 /* StreamingHangLogger.swift in Sources */,
 				11095B3820BE499C9AC5D4D1 /* AppNotificationNames.swift in Sources */,
