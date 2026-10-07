@@ -48,14 +48,14 @@ jobs:
       - name: Resolve Swift packages
         run: |
           xcodebuild -resolvePackageDependencies \
-            -project Dudu.xcodeproj \
+            -project src/ios/Dudu.xcodeproj \
             -scheme Dudu
 
       - name: Archive Dudu app unsigned
         run: |
           mkdir -p build
           xcodebuild archive \
-            -project Dudu.xcodeproj \
+            -project src/ios/Dudu.xcodeproj \
             -scheme Dudu \
             -configuration Release \
             -destination 'generic/platform=iOS' \
