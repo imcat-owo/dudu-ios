@@ -368,6 +368,19 @@ private class PlayerSession {
         ]
     }
 
+    // MARK: - Helpers
+
+    private static func fourCCToString(_ code: FourCharCode) -> String {
+        let chars: [Character] = [
+            Character(UnicodeScalar((code >> 24) & 0xFF)!),
+            Character(UnicodeScalar((code >> 16) & 0xFF)!),
+            Character(UnicodeScalar((code >> 8)  & 0xFF)!),
+            Character(UnicodeScalar( code        & 0xFF)!),
+        ]
+        return String(chars).trimmingCharacters(in: .whitespaces)
+    }
+}
+
     // MARK: - Cleanup (called when user dismisses UI)
 
     static func cleanupSession(_ sessionId: String) {

@@ -12,6 +12,7 @@ class GlobalAudioPlayer: ObservableObject {
     @Published var currentTime: TimeInterval = 0
     @Published var duration: TimeInterval = 0
     @Published var isLoaded = false
+    @Published var rate: Float = 1.0
 
     private var player: AVAudioPlayer?
 
@@ -44,5 +45,23 @@ class GlobalAudioPlayer: ObservableObject {
         isPlaying = false
         isLoaded = false
         currentTime = 0
+    }
+
+    func togglePlayPause() {
+        guard let p = player else { return }
+        if p.isPlaying {
+            p.pause()
+            isPlaying = false
+        } else {
+            p.rate = rate
+            p.play()
+            isPlaying = true
+        }
+    }
+
+    func seek(to time: TimeInterval) {
+        guard let p = player else { return }
+        p.currentTime = time
+        currentTime = time
     }
 }

@@ -1,6 +1,7 @@
 // Extracted from OpenMinis (GPL-3.0) — engine logic only, no UI.
 // Part of Dudu native rewrite.
 import Foundation
+import WebKit
 
 /// A normalized, user-facing description of a web navigation failure.
 struct WebLoadError: Equatable {
