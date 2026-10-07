@@ -734,15 +734,6 @@
 		FB02E1F2D6C375043B89B4FE /* WeatherOffload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuduEngine/NativeOffloads/WeatherOffload.h; sourceTree = SOURCE_ROOT; };
 		1D0E376D21B3E92319AAB996 /* Dudu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dudu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-/* Begin PBXFrameworksBuildPhase section */
-		A138F0D017C4CE1B8326F1AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 /* Begin PBXGroup section */
 		ADA122093F5E69721C2507F7 /* root */ = {
 			isa = PBXGroup;
@@ -1520,7 +1511,7 @@
 /* Begin PBXNativeTarget section */
 		25C942ED4A109EBC70E98FD2 /* Dudu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7AF68FDCD6D61E8C14CB550;
+			buildConfigurationList = 6E4E738A96C90B8CA899460A;
 			buildPhases = (
 				2415E1307B14719AB755F758 /* Sources */,
 				A138F0D017C4CE1B8326F1AA /* Frameworks */,
@@ -1528,7 +1519,7 @@
 			);
 			buildRules = (
 			);
-			dependencies = (953E8CA15AF58273140F9E7A /* BridgeCore */, 5E2CA1648BE297EDB991BB1F /* SwiftAnthropic */, CB67A1785EF38BD065178882 /* cmark-gfm */, 05B4E938DE649105AF4FB2F4 /* cmark-gfm-extensions */, 2A2374A5060B627C8A37E01E /* SwiftMath */, FFCF76F92E98CE6B956EBC19 /* RealTimeCutVADLibrary */);
+			dependencies = ();
 			name = Dudu;
 			productName = Dudu;
 			productReference = 1D0E376D21B3E92319AAB996 /* Dudu.app */;
@@ -1538,7 +1529,7 @@
 /* Begin PBXProject section */
 		2AAD477A1922D9EF459E8F78 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 47FC7FEAB483AD7A7800A602;
+			buildConfigurationList = 68AB61152D52D618D8D5C004;
 			compatibilityVersion = "Xcode 16.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1937,20 +1928,43 @@
 		2A2374A5060B627C8A37E01E /* SwiftMath */ = {isa = XCSwiftPackageProductDependency; package = 30CCF43A3F8DAA2D1EDCF631; productName = SwiftMath; };
 		FFCF76F92E98CE6B956EBC19 /* RealTimeCutVADLibrary */ = {isa = XCSwiftPackageProductDependency; package = F1EFE95A5CCF28EB0918475A; productName = RealTimeCutVADLibrary; };
 /* End XCSwiftPackageProductDependency section */
+/* Begin PBXBuildFile section */
+		E1F59DA013BDDD237645FAD1 /* BridgeCore in Frameworks */ = {isa = PBXBuildFile; productRef = 953E8CA15AF58273140F9E7A /* BridgeCore */; };
+		15A26269656A4D5707801A16 /* SwiftAnthropic in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2CA1648BE297EDB991BB1F /* SwiftAnthropic */; };
+		16417D6C28AC3E0D6A729F70 /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = CB67A1785EF38BD065178882 /* cmark-gfm */; };
+		07AED93F7D29CB4347485A81 /* cmark-gfm-extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 05B4E938DE649105AF4FB2F4 /* cmark-gfm-extensions */; };
+		47FC7FEAB483AD7A7800A602 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 2A2374A5060B627C8A37E01E /* SwiftMath */; };
+		A7AF68FDCD6D61E8C14CB550 /* RealTimeCutVADLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = FFCF76F92E98CE6B956EBC19 /* RealTimeCutVADLibrary */; };
+/* End PBXBuildFile section */
+/* Begin PBXFrameworksBuildPhase section */
+		A138F0D017C4CE1B8326F1AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1F59DA013BDDD237645FAD1 /* BridgeCore in Frameworks */,
+				15A26269656A4D5707801A16 /* SwiftAnthropic in Frameworks */,
+				16417D6C28AC3E0D6A729F70 /* cmark-gfm in Frameworks */,
+				07AED93F7D29CB4347485A81 /* cmark-gfm-extensions in Frameworks */,
+				47FC7FEAB483AD7A7800A602 /* SwiftMath in Frameworks */,
+				A7AF68FDCD6D61E8C14CB550 /* RealTimeCutVADLibrary in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 /* Begin XCBuildConfiguration section */
-		E1F59DA013BDDD237645FAD1 /* Debug */ = {
+		DADEF5BA9489D2F1844C5567 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		15A26269656A4D5707801A16 /* Release */ = {
+		539DC05415806177A89739A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		16417D6C28AC3E0D6A729F70 /* Debug */ = {
+		39254381D8442E97952F4BD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1974,7 +1988,7 @@
 			};
 			name = Debug;
 		};
-		07AED93F7D29CB4347485A81 /* Release */ = {
+		03455870452F1BB631F0C7FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2000,20 +2014,20 @@
 		};
 /* End XCBuildConfiguration section */
 /* Begin XCConfigurationList section */
-		47FC7FEAB483AD7A7800A602 /* Build configuration list for PBXProject "Dudu" */ = {
+		68AB61152D52D618D8D5C004 /* Build configuration list for PBXProject "Dudu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1F59DA013BDDD237645FAD1 /* Debug */,
-				15A26269656A4D5707801A16 /* Release */,
+				DADEF5BA9489D2F1844C5567 /* Debug */,
+				539DC05415806177A89739A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7AF68FDCD6D61E8C14CB550 /* Build configuration list for PBXNativeTarget "Dudu" */ = {
+		6E4E738A96C90B8CA899460A /* Build configuration list for PBXNativeTarget "Dudu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16417D6C28AC3E0D6A729F70 /* Debug */,
-				07AED93F7D29CB4347485A81 /* Release */,
+				39254381D8442E97952F4BD9 /* Debug */,
+				03455870452F1BB631F0C7FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
