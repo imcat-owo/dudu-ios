@@ -352,6 +352,12 @@
 		E3E505CA1519A7694D4435E1 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 0321277811C1E3A194553A24 /* Resources */; };
 		06C0AA9D22198448A7F69FAB /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 6DCDCFF08EB39FF683390249 /* Resources */; };
 		70B01124C9E2FF386DC46213 /* default_mount in Resources */ = {isa = PBXBuildFile; fileRef = 2CEAE95AFC7E0DB7CA329E58 /* default_mount */; };
+		E1F59DA013BDDD237645FAD1 /* BridgeCore in Frameworks */ = {isa = PBXBuildFile; productRef = 953E8CA15AF58273140F9E7A /* BridgeCore */; };
+		15A26269656A4D5707801A16 /* SwiftAnthropic in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2CA1648BE297EDB991BB1F /* SwiftAnthropic */; };
+		16417D6C28AC3E0D6A729F70 /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = CB67A1785EF38BD065178882 /* cmark-gfm */; };
+		07AED93F7D29CB4347485A81 /* cmark-gfm-extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 05B4E938DE649105AF4FB2F4 /* cmark-gfm-extensions */; };
+		47FC7FEAB483AD7A7800A602 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 2A2374A5060B627C8A37E01E /* SwiftMath */; };
+		A7AF68FDCD6D61E8C14CB550 /* RealTimeCutVADLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = FFCF76F92E98CE6B956EBC19 /* RealTimeCutVADLibrary */; };
 /* End PBXBuildFile section */
 /* Begin PBXFileReference section */
 		2B5DD52076B5BE7D8EF971A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dudu/ContentView.swift; sourceTree = SOURCE_ROOT; };
@@ -1928,14 +1934,6 @@
 		2A2374A5060B627C8A37E01E /* SwiftMath */ = {isa = XCSwiftPackageProductDependency; package = 30CCF43A3F8DAA2D1EDCF631; productName = SwiftMath; };
 		FFCF76F92E98CE6B956EBC19 /* RealTimeCutVADLibrary */ = {isa = XCSwiftPackageProductDependency; package = F1EFE95A5CCF28EB0918475A; productName = RealTimeCutVADLibrary; };
 /* End XCSwiftPackageProductDependency section */
-/* Begin PBXBuildFile section */
-		E1F59DA013BDDD237645FAD1 /* BridgeCore in Frameworks */ = {isa = PBXBuildFile; productRef = 953E8CA15AF58273140F9E7A /* BridgeCore */; };
-		15A26269656A4D5707801A16 /* SwiftAnthropic in Frameworks */ = {isa = PBXBuildFile; productRef = 5E2CA1648BE297EDB991BB1F /* SwiftAnthropic */; };
-		16417D6C28AC3E0D6A729F70 /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = CB67A1785EF38BD065178882 /* cmark-gfm */; };
-		07AED93F7D29CB4347485A81 /* cmark-gfm-extensions in Frameworks */ = {isa = PBXBuildFile; productRef = 05B4E938DE649105AF4FB2F4 /* cmark-gfm-extensions */; };
-		47FC7FEAB483AD7A7800A602 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = 2A2374A5060B627C8A37E01E /* SwiftMath */; };
-		A7AF68FDCD6D61E8C14CB550 /* RealTimeCutVADLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = FFCF76F92E98CE6B956EBC19 /* RealTimeCutVADLibrary */; };
-/* End PBXBuildFile section */
 /* Begin PBXFrameworksBuildPhase section */
 		A138F0D017C4CE1B8326F1AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
