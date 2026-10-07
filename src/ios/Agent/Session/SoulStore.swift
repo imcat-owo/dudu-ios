@@ -1083,7 +1083,3 @@ enum SystemPromptBuilder {
 
 // MARK: - Reusable SwiftUI text view
 
-/// Renders the current SOUL.md `name` (falling back to "Minis") and
-/// auto-refreshes whenever SoulStore posts `.soulMdChanged`. Use this in
-/// any place that previously hard-coded "Minis" as a label.
-@MainActor
