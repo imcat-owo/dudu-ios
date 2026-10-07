@@ -6727,7 +6727,16 @@ final class AIChatViewModel: ObservableObject, SpeechControlling {
         let content = block.cachedMarkdown ?? MarkdownContent(prepareMarkdownForRender(block.content))
         block.cachedMarkdown = content
         block.cachedAttributedString = autoreleasepool {
-            renderMarkdownBlocks(content.blocks)
+            // Engine-layer rendering via the system markdown parser.
+            // The rich custom renderer (tables, video attachments, syntax
+            // highlighting) belongs to Dudu's UI layer and will populate
+            // this cache entry when the new UI is written.
+            let prepared = prepareMarkdownForRender(block.content)
+            if let attr = try? AttributedString(markdown: prepared) {
+                NSAttributedString(attr)
+            } else {
+                NSAttributedString(string: block.content)
+            }
         }
     }
 
