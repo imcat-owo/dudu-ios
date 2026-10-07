@@ -1,0 +1,17 @@
+name: Validate Xcode project
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: macos-26
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: recursive
+      - name: List project
+        run: |
+          xcodebuild -list -project src/ios/Dudu.xcodeproj 2>&1 | head -40
