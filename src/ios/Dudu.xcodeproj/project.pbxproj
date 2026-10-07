@@ -360,6 +360,11 @@
 		5D37B15FED43D9119523375D /* RootfsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E357109E0F4E7934020503EA /* RootfsManager.swift */; };
 		36B522D5F9E74FA2AF0ADA80 /* AutoTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DDC7A933DAD8F0A99EFF0C /* AutoTouch.m */; };
 		06B1D586E5D749B8CE172360 /* AttributeQueryRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD167259DF61E225DDCB1D0 /* AttributeQueryRecorder.m */; };
+		98D8C75E0EBE156FF68136B3 /* FileHandleSafeWrite.m in Sources */ = {isa = PBXBuildFile; fileRef = CA253915B45E386EC40B87E6 /* FileHandleSafeWrite.m */; };
+		48D8E053AF9211A6CB1EC4D3 /* NSTextContainerSetSizeGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D61AD32698D874F668CAC7E /* NSTextContainerSetSizeGuard.m */; };
+		539470CA228B6A9C1A2FF0EC /* ObjCExceptionCatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD370477C5FE39B840A88ED /* ObjCExceptionCatcher.m */; };
+		37B6A8A4DF7AFCFA846EFDC7 /* SafeKVCSetTrue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1527C6B0D3733E5FAF926B /* SafeKVCSetTrue.m */; };
+		8670FAC876672AD6AADE54F6 /* HangDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E4DC88A50F52F655046DDFA6 /* HangDetector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -711,6 +716,11 @@
 		E357109E0F4E7934020503EA /* RootfsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iSH/RootfsManager.swift"; sourceTree = "<group>"; };
 		20DDC7A933DAD8F0A99EFF0C /* AutoTouch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Debug/AutoTouch.m"; sourceTree = "<group>"; };
 		6BD167259DF61E225DDCB1D0 /* AttributeQueryRecorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Debug/AttributeQueryRecorder.m"; sourceTree = "<group>"; };
+		CA253915B45E386EC40B87E6 /* FileHandleSafeWrite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Shared/FileHandleSafeWrite.m"; sourceTree = "<group>"; };
+		2D61AD32698D874F668CAC7E /* NSTextContainerSetSizeGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Shared/NSTextContainerSetSizeGuard.m"; sourceTree = "<group>"; };
+		5CD370477C5FE39B840A88ED /* ObjCExceptionCatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Shared/ObjCExceptionCatcher.m"; sourceTree = "<group>"; };
+		3F1527C6B0D3733E5FAF926B /* SafeKVCSetTrue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Shared/SafeKVCSetTrue.m"; sourceTree = "<group>"; };
+		E4DC88A50F52F655046DDFA6 /* HangDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Debug/HangDetector.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1157,6 +1167,11 @@
 				5D37B15FED43D9119523375D /* RootfsManager.swift in Sources */,
 				36B522D5F9E74FA2AF0ADA80 /* AutoTouch.m in Sources */,
 				06B1D586E5D749B8CE172360 /* AttributeQueryRecorder.m in Sources */,
+				98D8C75E0EBE156FF68136B3 /* FileHandleSafeWrite.m in Sources */,
+				48D8E053AF9211A6CB1EC4D3 /* NSTextContainerSetSizeGuard.m in Sources */,
+				539470CA228B6A9C1A2FF0EC /* ObjCExceptionCatcher.m in Sources */,
+				37B6A8A4DF7AFCFA846EFDC7 /* SafeKVCSetTrue.m in Sources */,
+				8670FAC876672AD6AADE54F6 /* HangDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,6 +1207,7 @@
 					"$(SRCROOT)/NativeOffloads",
 					"$(SRCROOT)/iSH",
 					"$(SRCROOT)/Debug",
+					"$(SRCROOT)/Shared",
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/../../deps/frameworks/Rclone.xcframework/ios-arm64/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
@@ -1222,6 +1238,7 @@
 					"$(SRCROOT)/NativeOffloads",
 					"$(SRCROOT)/iSH",
 					"$(SRCROOT)/Debug",
+					"$(SRCROOT)/Shared",
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/../../deps/frameworks/Rclone.xcframework/ios-arm64/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
