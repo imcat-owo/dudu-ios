@@ -1203,8 +1203,8 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		AF74D7B24B4E3EFCD7E3258C /* XCRemoteSwiftPackageReference "swift-cmark" */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/swiftlang/swift-cmark"; requirement = {kind = upToNextMajorVersion; minimumVersion = 0.4.0;}; };
 		5BD2FBC3C7A0C6BAE109F659 /* SwiftAnthropic */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/jamesrochabrun/SwiftAnthropic"; requirement = {kind = exactVersion; version = 2.2.0;}; };
-		CB3555B2A935947A800E17FE /* swift-math */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/mgriebling/SwiftMath"; requirement = {kind = exactVersion; version = 1.7.3;}; };
-		4A657BE2DAC5A14C7A3D479A /* VAD */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/helloooideeeeea/RealTimeCutVADLibrary.git"; requirement = {kind = exactVersion; version = 1.0.0;}; };
+		CB3555B2A935947A800E17FE /* swift-math */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/mgriebling/SwiftMath"; requirement = {kind = upToNextMajorVersion; minimumVersion = 1.7.3;}; };
+		4A657BE2DAC5A14C7A3D479A /* VAD */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/helloooideeeeea/RealTimeCutVADLibrary.git"; requirement = {kind = upToNextMajorVersion; minimumVersion = 1.0.0;}; };
 /* End XCRemoteSwiftPackageReference section */
 /* Begin XCLocalSwiftPackageReference section */
 		55E4CC1A4CB69225A42595C8 /* XCLocalSwiftPackageReference "BridgeCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = BridgeCore; };
