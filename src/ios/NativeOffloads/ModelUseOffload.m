@@ -11,7 +11,7 @@
 #include "kernel/native_offload.h"
 #include <unistd.h>
 
-#import "Minis-Swift.h"
+#import "Dudu-Swift.h"
 
 static NSString *const TOOL_NAME = @"minis-model-use";
 

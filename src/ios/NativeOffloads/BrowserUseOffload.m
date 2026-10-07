@@ -16,8 +16,8 @@
 #include <unistd.h>
 
 // Swift bridge — generated header
-#if __has_include("Minis-Swift.h")
-#import "Minis-Swift.h"
+#if __has_include("Dudu-Swift.h")
+#import "Dudu-Swift.h"
 #elif __has_include("MinisApp-Swift.h")
 #import "MinisApp-Swift.h"
 #endif

@@ -11,8 +11,8 @@
 #include "kernel/native_offload.h"
 #include <unistd.h>
 
-#if __has_include("Minis-Swift.h")
-#import "Minis-Swift.h"
+#if __has_include("Dudu-Swift.h")
+#import "Dudu-Swift.h"
 #else
 @interface ThemeOffloadBridge : NSObject
 + (NSDictionary * _Nonnull)currentPack;

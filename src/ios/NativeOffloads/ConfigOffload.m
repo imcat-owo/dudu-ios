@@ -15,8 +15,8 @@
 #import "NativeOffloadUtils.h"
 #include "kernel/native_offload.h"
 
-#if __has_include("Minis-Swift.h")
-#import "Minis-Swift.h"
+#if __has_include("Dudu-Swift.h")
+#import "Dudu-Swift.h"
 #else
 @interface ConfigOffloadBridge : NSObject
 + (BOOL)isEnabled;
