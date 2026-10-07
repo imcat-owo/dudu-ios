@@ -14,4 +14,8 @@ extension Notification.Name {
     /// Posted when an agent loop ends on a VM that is not the currently-displayed one.
     /// `object` is the session ID (`String`). Allows the active VM to reload from DB.
     static let sessionAgentLoopDidEnd = Notification.Name("sessionAgentLoopDidEnd")
+    /// Posted after a memory file (GLOBAL.md or daily log) is written
+    /// locally. Observers can use this to refresh their in-memory snapshot
+    /// of memory files.
+    static let memoryFilesDidChange = Notification.Name("com.openminis.clone.memoryFilesDidChange")
 }
