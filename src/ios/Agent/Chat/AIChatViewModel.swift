@@ -6733,9 +6733,9 @@ final class AIChatViewModel: ObservableObject, SpeechControlling {
             // this cache entry when the new UI is written.
             let prepared = prepareMarkdownForRender(block.content)
             if let attr = try? AttributedString(markdown: prepared) {
-                NSAttributedString(attr)
+                return NSAttributedString(attr)
             } else {
-                NSAttributedString(string: block.content)
+                return NSAttributedString(string: block.content)
             }
         }
     }
