@@ -1213,6 +1213,9 @@
 					"$(SRCROOT)/../../deps/frameworks/Rclone.xcframework/ios-arm64/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
 				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../../deps/frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Dudu/Info.plist";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Dudu/Dudu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1244,6 +1247,9 @@
 					"$(SRCROOT)/../../deps/frameworks/FFmpeg.framework/Headers",
 					"$(SRCROOT)/../../deps/frameworks/Rclone.xcframework/ios-arm64/Headers",
 					"$(SRCROOT)/Vendor/cppjieba/include",
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../../deps/frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Dudu/Info.plist";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Dudu/Dudu-Bridging-Header.h";
