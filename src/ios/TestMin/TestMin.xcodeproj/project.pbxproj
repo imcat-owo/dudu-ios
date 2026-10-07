@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		256E8F92B8213A15FB3CF578 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92879D8F33EBA71DEE52AC /* Test.swift */; };
 		48D987A94599CB426C950038 /* BridgeCore in Frameworks */ = {isa = PBXBuildFile; productRef = C866C2FD8E0A35FDBA6D24C1 /* BridgeCore */; };
+		3A574E14CCCFFB1BB42DA2FE /* cmark-gfm in Frameworks */ = {isa = PBXBuildFile; productRef = 135B192CFB4BFE4C2B2DF2BF /* cmark-gfm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 			);
 			mainGroup = 31E33F0D17ABE884C2376A17;
 			packageReferences = (
+				AF74D7B24B4E3EFCD7E3258C /* swift-cmark */,
 				55E4CC1A4CB69225A42595C8 /* BridgeCore */,
 			);
 			productRefGroup = 6166B811293DA6B9BA1D0389 /* Products */;
@@ -142,11 +144,15 @@
 		};
 /* End XCBuildConfiguration section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		AF74D7B24B4E3EFCD7E3258C /* XCRemoteSwiftPackageReference "swift-cmark" */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/swiftlang/swift-cmark"; requirement = {kind = upToNextMajorVersion; minimumVersion = 0.4.0;}; };
+/* End XCRemoteSwiftPackageReference section */
 /* Begin XCLocalSwiftPackageReference section */
 		55E4CC1A4CB69225A42595C8 /* XCLocalSwiftPackageReference "BridgeCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = ../BridgeCore; };
 /* End XCLocalSwiftPackageReference section */
 /* Begin XCSwiftPackageProductDependency section */
 		C866C2FD8E0A35FDBA6D24C1 /* BridgeCore */ = {isa = XCSwiftPackageProductDependency; package = 55E4CC1A4CB69225A42595C8 /* BridgeCore */; productName = BridgeCore; };
+		135B192CFB4BFE4C2B2DF2BF /* cmark-gfm */ = {isa = XCSwiftPackageProductDependency; package = AF74D7B24B4E3EFCD7E3258C /* swift-cmark */; productName = cmark-gfm; };
 /* End XCSwiftPackageProductDependency section */
 /* Begin XCConfigurationList section */
 		2EF0642AEE0821CE72F0FE13 /* Build configuration list for PBXProject "Test" */ = {
