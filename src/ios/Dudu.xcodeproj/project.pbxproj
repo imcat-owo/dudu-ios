@@ -1528,7 +1528,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C38B39696DE31333EA3228B5 /* Dudu */,
 			);
 		};
 /* End PBXProject section */
