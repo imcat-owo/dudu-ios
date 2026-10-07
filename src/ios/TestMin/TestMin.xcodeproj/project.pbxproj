@@ -1,0 +1,163 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		256E8F92B8213A15FB3CF578 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92879D8F33EBA71DEE52AC /* Test.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A92879D8F33EBA71DEE52AC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		53A740443B6BCDC32D15ACD9 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5C367411005A22CE46780F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31E33F0D17ABE884C2376A17 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				9A92879D8F33EBA71DEE52AC /* Test.swift */,
+				6166B811293DA6B9BA1D0389 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6166B811293DA6B9BA1D0389 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53A740443B6BCDC32D15ACD9 /* Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F59EA277784037966BBD4079 /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32C6E35C07EF58A416D5861 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				160B9CE9565616E90CB61040 /* Sources */,
+				A5C367411005A22CE46780F9 /* Frameworks */,
+				A907260F388BF3EEA288F450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test;
+			productName = Test;
+			productReference = 53A740443B6BCDC32D15ACD9 /* Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76D9BD5C517F47C57556D9C1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2EF0642AEE0821CE72F0FE13 /* Build configuration list for PBXProject "Test" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31E33F0D17ABE884C2376A17;
+			productRefGroup = 6166B811293DA6B9BA1D0389 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F59EA277784037966BBD4079 /* Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A907260F388BF3EEA288F450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		160B9CE9565616E90CB61040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				256E8F92B8213A15FB3CF578 /* Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D77477ECD1985D2E3F6A5A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A4EAD8F7765D8A19C1F0E2D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		8D56576C683F0FFBE21E3CA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		48898CA4589CB63951A3AE95 /* Release */ = {
+				isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EF0642AEE0821CE72F0FE13 /* Build configuration list for PBXProject "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D77477ECD1985D2E3F6A5A06 /* Debug */,
+				A4EAD8F7765D8A19C1F0E2D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32C6E35C07EF58A416D5861 /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D56576C683F0FFBE21E3CA1 /* Debug */,
+				48898CA4589CB63951A3AE95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 76D9BD5C517F47C57556D9C1 /* Project object */;
+}
