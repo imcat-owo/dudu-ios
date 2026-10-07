@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		256E8F92B8213A15FB3CF578 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92879D8F33EBA71DEE52AC /* Test.swift */; };
+		48D987A94599CB426C950038 /* BridgeCore in Frameworks */ = {isa = PBXBuildFile; productRef = C866C2FD8E0A35FDBA6D24C1 /* BridgeCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D987A94599CB426C950038 /* BridgeCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,9 @@
 				Base,
 			);
 			mainGroup = 31E33F0D17ABE884C2376A17;
+			packageReferences = (
+				55E4CC1A4CB69225A42595C8 /* BridgeCore */,
+			);
 			productRefGroup = 6166B811293DA6B9BA1D0389 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +142,12 @@
 		};
 /* End XCBuildConfiguration section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		55E4CC1A4CB69225A42595C8 /* XCLocalSwiftPackageReference "BridgeCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = ../BridgeCore; };
+/* End XCLocalSwiftPackageReference section */
+/* Begin XCSwiftPackageProductDependency section */
+		C866C2FD8E0A35FDBA6D24C1 /* BridgeCore */ = {isa = XCSwiftPackageProductDependency; package = 55E4CC1A4CB69225A42595C8 /* BridgeCore */; productName = BridgeCore; };
+/* End XCSwiftPackageProductDependency section */
 /* Begin XCConfigurationList section */
 		2EF0642AEE0821CE72F0FE13 /* Build configuration list for PBXProject "Test" */ = {
 			isa = XCConfigurationList;
