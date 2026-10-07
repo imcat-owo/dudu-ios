@@ -1,0 +1,87 @@
+name: Build Dudu iOS IPA (unsigned)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-ios:
+    runs-on: macos-26
+    timeout-minutes: 180
+    steps:
+      - name: Checkout source and submodules
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: recursive
+
+      - name: Install native build tools
+        run: |
+          brew install meson ninja llvm lld libarchive pkg-config
+          echo "$(brew --prefix llvm)/bin" >> "$GITHUB_PATH"
+
+      - name: Set up Go for Rclone build
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: deps/rclone-mobile/go.mod
+          cache-dependency-path: deps/rclone-mobile/go.sum
+
+      - name: Patch iSH VDSO linker path for macOS
+        run: |
+          lld_prefix="$(brew --prefix lld)"
+          test -x "$lld_prefix/bin/ld.lld"
+          sed -i '' "s#'-fuse-ld=lld'#'-fuse-ld=$lld_prefix/bin/ld.lld'#" \
+            deps/ish/vdso/arm64/meson.build
+          grep -F -- "-fuse-ld=$lld_prefix/bin/ld.lld" \
+            deps/ish/vdso/arm64/meson.build
+
+      - name: Build iOS native dependencies
+        run: |
+          ./deps/build_lame.sh
+          ./deps/build_ffmpeg.sh
+          ./deps/build_rclone_ios.sh
+          ./deps/build_ish.sh release
+          ./deps/prepare_alpine_rootfs.sh
+
+      - name: Resolve Swift packages
+        run: |
+          xcodebuild -resolvePackageDependencies \
+            -project Dudu.xcodeproj \
+            -scheme Dudu
+
+      - name: Archive Dudu app unsigned
+        run: |
+          mkdir -p build
+          xcodebuild archive \
+            -project Dudu.xcodeproj \
+            -scheme Dudu \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$PWD/build/Dudu.xcarchive" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM=""
+
+      - name: Package unsigned IPA
+        run: |
+          set -euo pipefail
+          app="build/Dudu.xcarchive/Products/Applications/Dudu.app"
+          test -d "$app"
+          mkdir -p build/Payload
+          cp -R "$app" build/Payload/Dudu.app
+          cd build
+          /usr/bin/zip -qry Dudu-unsigned.ipa Payload/Dudu.app
+          cd ..
+          /usr/bin/file build/Dudu-unsigned.ipa
+          /usr/bin/du -h build/Dudu-unsigned.ipa
+
+      - name: Upload Dudu IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Dudu-iOS-unsigned-${{ github.run_number }}
+          path: build/Dudu-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14

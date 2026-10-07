@@ -1,0 +1,89 @@
+diff --git a/kernel/native_offload.c b/kernel/native_offload.c
+index 5df6d46..a5d9ef8 100644
+--- a/kernel/native_offload.c
++++ b/kernel/native_offload.c
+@@ -182,22 +182,61 @@ int native_offload_set_abort_handler(const char *guest_name, native_abort_func a
+     return -1;
+ }
+ 
+-// Internal: find entry by guest binary basename
++// Internal: find entry by guest path.
++// Path-scoped registrations (guest_name contains '/') match the full guest
++// execve path; others match basename only (legacy).
+ static struct offload_entry *offload_find(const char *guest_path) {
+-    if (offload_count == 0)
++    if (offload_count == 0 || guest_path == NULL)
+         return NULL;
+     const char *base = strrchr(guest_path, '/');
+     base = base ? base + 1 : guest_path;
+     for (int i = 0; i < offload_count; i++) {
+-        if (strcmp(base, offload_entries[i].guest_name) == 0)
++        const char *name = offload_entries[i].guest_name;
++        if (name == NULL)
++            continue;
++        if (strchr(name, '/') != NULL) {
++            if (strcmp(guest_path, name) == 0)
++                return &offload_entries[i];
++        } else if (strcmp(base, name) == 0) {
+             return &offload_entries[i];
++        }
+     }
+     return NULL;
+ }
+ 
++// Forward decls — used by native_offload_lookup's ELF gate for path-scoped
++// handlers. Defined below with the shared path helpers.
++static bool build_host_path_for_guest(const char *guest_path,
++                                      char *out, size_t out_size);
++
++// True when the guest path resolves to a host file with an ELF magic header.
++// Used so path-scoped in-process handlers do not hijack a real apk/user
++// binary that replaced an app-managed stub at the same path (OpenMinis#288).
++static bool guest_file_is_elf(const char *guest_path) {
++    char host_path[PATH_MAX];
++    if (!build_host_path_for_guest(guest_path, host_path, sizeof(host_path)))
++        return false;
++    int fd = open(host_path, O_RDONLY);
++    if (fd < 0)
++        return false;
++    unsigned char mag[4];
++    ssize_t n = read(fd, mag, sizeof(mag));
++    close(fd);
++    return n == 4 && mag[0] == 0x7f && mag[1] == 'E' && mag[2] == 'L' && mag[3] == 'F';
++}
++
+ const char *native_offload_lookup(const char *guest_path) {
+     struct offload_entry *e = offload_find(guest_path);
+     if (!e) return NULL;
++    // Path-scoped in-process handlers only claim the app-managed stub. If the
++    // file at that path is a real ELF (e.g. `apk add ffmpeg` replaced the
++    // stub), fall through to emulated exec so the official binary runs.
++    if (e->handler != NULL && e->guest_name != NULL &&
++        strchr(e->guest_name, '/') != NULL &&
++        guest_file_is_elf(guest_path)) {
++        printk("native_offload: skip %s — guest file is a real ELF\n", guest_path);
++        return NULL;
++    }
+     // Return non-NULL to signal "offload this". For handler-only entries
+     // (no native_path), return a sentinel so the caller proceeds to exec.
+     return e->native_path ? e->native_path : "[builtin]";
+diff --git a/kernel/native_offload.h b/kernel/native_offload.h
+index 414f72c..10edf7e 100644
+--- a/kernel/native_offload.h
++++ b/kernel/native_offload.h
+@@ -58,8 +58,13 @@ typedef int (*native_handler_func)(int argc, char **argv,
+                                    int stdin_fd, int stdout_fd, int stderr_fd);
+ 
+ // Register an in-process handler for a guest binary name.
+-// When guest execve() basename matches guest_name, handler is called
+-// instead of emulating the binary. Takes priority over host binary lookup.
++// Matching rules for guest_name:
++//   - If guest_name contains '/', match the guest execve path exactly
++//     (e.g. "/usr/bin/ffmpeg"). For in-process handlers, a real guest ELF
++//     at that path is NOT offloaded — so apk/user binaries that replace a
++//     stub keep working (see native_offload_lookup).
++//   - Otherwise match by basename only (legacy behaviour).
++// Takes priority over host binary lookup.
+ // Returns 0 on success, -1 if registry is full.
+ int native_offload_add_handler(const char *guest_name, native_handler_func handler);
+ 

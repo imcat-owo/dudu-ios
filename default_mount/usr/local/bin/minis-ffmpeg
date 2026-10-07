@@ -1,0 +1,8 @@
+#!/bin/sh
+# minis-ffmpeg — explicit VideoToolbox/native FFmpegOffload entry point.
+# Basename is unique on purpose (OpenMinis#288): unlike /usr/bin/ffmpeg, this
+# never collides with Alpine apk ffmpeg or user scripts named ffmpeg.
+# The native offload intercepts execve of this basename; the script body is a
+# fallback message if offload is unavailable.
+echo "minis: minis-ffmpeg native offload unavailable" >&2
+exit 127
